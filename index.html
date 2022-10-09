@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Weather Dashboard</title>
+</head>
+
+<body class="min-100-vh min-100-vw flex-column">
+    <div class="container-fluid">
+        <header class="text-center text-white bg-dark">
+            <div class="row">
+                <div class="col-12 col-md-4 col-sm-12">
+                    <h1>Weather Dashboard</h1>
+                </div>
+            </div>
+        </header>
+            <div class="row">
+                <div class="col-12 col-md-4 col-sm-12 ">
+                    <div class="card search-card">
+                        <div class="card-body">
+                            <form class="form-block">
+                                <h2>Search for a City:</h2>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button id = "search-btn" class="btn my-4 my-sm-4 " type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-8 col-sm-12">
+                    <div class="card results-card">
+                        <div class="card-body">
+                            <header class="card-header text-left">
+                                <h2 id='cityName' class="text-black">
+                                    Austin
+                                </h2>
+                            <section class="col-12 col-md-8 col-sm-12">
+                              <div class="table-responsive">
+                                <table class="table table-bordered custom-table">
+                                 <thead>
+                                    <h2 id='weather-blocks' class="text-black">
+                                    5-day Forecast:
+                                    </h2>
+                                </thead>
+                                    <tr>
+                                      <th scope="col-12 col-sm-12"></th>
+                                      <th scope="col-12 col-sm-12"></th>
+                                      <th scope="col-12 col-sm-12"></th>
+                                      <th scope="col-12 col-sm-12"></th>
+                                      <th scope="col-12 col-sm-12"></th>
+                                    </tr>
+                                </table>
+                              </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+header {
+    width: 100%;
+}
+.search-card {
+display: flex;
+justify-content: flex-end;
+
+}
+
+.results-card {
+display: block;
+justify-content: flex-end;
+}
+
+.btn {
+    width: 100%;
+    padding-top: 10px;
+    background-color: green;
+    color: white;
+    
+}
+
+.btn:hover {
+    background-color: lightgreen;
+    color: black;
+
+}
