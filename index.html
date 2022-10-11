@@ -23,31 +23,30 @@
             </div>
         </header>
         <main>
-            <section class="row">
-                <div class="col-2">
-                    <form class="form-group">
-                        <label for="input"><h2>Search for a City:</h2></label>
+            <aside class="row">
+                <div class="col-4 search-card">
+                    <form class="form-block ">
+                        <label for="input">
+                            <h3>Search for a City:</h3>
+                        </label>
                         <input type="text" id="citySearch" class="form-control mr-sm-2" placeholder="Search"
                             aria-label="Search">
                         <button type="submit" id="search-btn" class="btn my-4 my-sm-4">Search</button>
                     </form>
                 </div>
-            </section>
-            <section class="col-10">
-                <section id="results-section" class="row">
-                 <div id="place-container" class="col-10">
-                 </div>
-                 <div class="row">
+            </aside>
+            <section id="results-section" class="row">
+                <div id="city-container" class="col-8">
+                </div>
+                <div class="row">
                     <ul class="forecast-cards">
-                        <li> </li>
                     </ul>
                 </div>
-                </section>
             </section>
-        </section>
-    </main>
-    <script src="./assets/script.js"></script>
+        </main>
+    </section>
 
+    <script src="./assets/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -62,4 +61,3 @@
 </body>
 
 </html>
-
