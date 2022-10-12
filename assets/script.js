@@ -13,7 +13,7 @@ form.addEventListener('submit', function (e) {
 
 // Return lat and long by city
 // function getCityData () {
- fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}&units=imperial`)
+ fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}&units=imperial`)
     .then(function (response) {
       return response.json()
     })
@@ -24,7 +24,7 @@ form.addEventListener('submit', function (e) {
           let lonAll = cityData[i].lon
           console.log(latAll, lonAll)
          }
-         for (let i = 0; i < 5; i++) {
+         for (let i = 0; i < 1; i++) {
           let latAll = cityData[i].lat
           let lonAll = cityData[i].lon
           fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latAll}&lon=${lonAll}&appid=${apiKey}&units=imperial`)
@@ -35,56 +35,24 @@ form.addEventListener('submit', function (e) {
                console.log(data);
     let  { city, list, weather } = data;
 
-    for (let i = 0; i < data.length; i++) {
-    let icon = `https://openweathermap.org/img/wn${list[i].weather[i]['icon']}@2x.png`;
+    for (let i = 0; i < 40; i+=8 ) {
+    let icon = `https://openweathermap.org/img/wn/${list[i].weather[0]['icon']}@2x.png`;
    
     const li = document.createElement('li');
     const liContent = `
-    <h3 class="city-name" data-name="${city.name},${city.country}">
+    <h3 class="city-name" data-name="${city.name}">
       <span>${city.name}</span>
+      <span>${window.moment(list[i].dt*1000).format('ddd')}</span>
     </h3>
-    <div class="city-temp-max">${Math.round(list[i].main.temp_max)}<sup>°F</sup>
-    </div>
-    <div class="city-temp-min">${Math.round(list[i].main.temp_min)}<sup>°F</sup>
+    <div class="city-temp-max">High Temp: ${Math.round(list[i].main.temp)}<sup>°F</sup>
     </div>
     <div> <img class="city-icon" src=${icon} alt="weather-icon"}>
-          <p>${list[i].weather[i]["description"]}</p>
+          <p>${list[i].weather[0]["description"]}</p>
     </div> `;
     li.setAttribute('class', 'city');
     li.innerHTML = liContent;
     forecast.appendChild(li);
   } })} 
         })      
-  // }  
-});
+  })
 
-  // function showWeatherData(data) { 
-    
-  // }
-
-
-
-
-//   <figure>
-//   <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
-//   <figcaption>${weather[0]["description"]}</figcaption>
-// </figure>
-
-
-// let currentTemp = document.createElement('p');
-// let maxTemp = document.createElement('p');
-// let minTemp = document.createElement('p');
-// let weather = document.createElement('p');
-
-// cityEl.textContent = data.main.name;
-// currentTemp.textContent = data.main.temp;
-// maxTemp.textContent =  data.main.temp_max;
-// minTemp.textContent = data.main.temp_min;
-// weather.innerHTML = data.weather
-
-// tableCards.append(currentTemp);
-// tableCards.append(maxTemp);
-// tableCards.append(minTemp);
-// tableCards.append(weather);
-// });
-// }
