@@ -34,6 +34,10 @@ THEN I am again presented with current and future conditions for that city
 ```
 ```
 
+## View
+
+<img src="/assets/weather-dashboard.png" alt="weather dashboard front page img">
+
 ## Project review
 
 I did not spend as much time as I'd haved liked on this project, but I did in fact enjoy the work I did. APIs were a little scary at first, but I can see how working with them more regularly will make future API projects much easier. I think when I have the time to work on this in the future, I'll find it to be one of my more enjoyable projects. 
