@@ -2,7 +2,7 @@
 
 
 Deployment date: 10/11/22</br>
-Deployed address: https://sarahthoorens.github.io//</br>
+Deployed address: https://sarahthoorens.github.io/weather-app/ </br>
 Topics applied: Bootstrap, jQuery, javascript, HTML, CSS, local and third-party API</br>
 Project goal: Create a weather application that pulls forecast for specified city
 
@@ -32,11 +32,11 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
-```
 
-## View
+**Page View**
 
-<img src="/assets/weather-dashboard.png" alt="weather dashboard front page img">
+![weather dashboard front page](/assets/weather-dashboard.png)
+
 
 ## Project review
 
